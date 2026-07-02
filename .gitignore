@@ -1,0 +1,31 @@
+# Secrets — never commit a real .env
+.env
+
+# Generated briefs (keep the folder via .gitkeep, ignore the contents)
+outputs/*
+!outputs/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Editor / OS noise
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local Claude Code settings (machine-specific permission grants)
+.claude/settings.local.json
+
+# Evaluation runs (keep folder + scenarios, ignore generated result JSON)
+eval/results/*.json

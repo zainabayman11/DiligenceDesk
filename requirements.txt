@@ -1,0 +1,43 @@
+# Pinned to the exact versions this project was built and tested against, so a
+# reviewer gets a reproducible environment.
+#
+# Only the CORE block is needed for stub mode (the keyless, offline demo + tests
+# + eval). The other blocks are needed only for the mode/provider you actually
+# use, and their libraries are imported LAZILY, so you don't have to install what
+# you won't run.
+
+# --- Core: graph + schemas (REQUIRED, even for stub mode) -------------------
+# LangGraph 1.x is the "graph" generation (StateGraph / Command / MemorySaver).
+# The companion packages MUST match langgraph's version or you get import errors.
+langgraph==1.0.5
+langgraph-prebuilt==1.0.5
+langgraph-checkpoint==3.0.1
+langchain-core==1.2.7
+pydantic==2.12.5
+python-dotenv==1.2.1
+
+# --- LLM providers (provider-agnostic; pick via *_PROVIDER env vars) ---------
+# Imported lazily for the provider you choose, so stub mode/tests need neither.
+langchain-groq==1.1.0          # default provider (supervisor: llama-3.3-70b, worker: llama-3.1-8b-instant)
+langchain-google-genai==4.1.2  # alternative provider (gemini-2.5-flash / -flash-lite)
+# langchain-ollama==0.3.10     # OPTIONAL: fully-local SLMs via Ollama (ollama provider)
+
+# --- Tool mode: mcp (the MCP learning path) ---------------------------------
+# Loads fetch + filesystem from real MCP servers over stdio. Also needs uv (uvx)
+# and Node (npx) on PATH to launch the reference servers.
+langchain-mcp-adapters==0.2.1
+mcp==1.25.0
+
+# --- Tool mode: local (real public data, no MCP setup) ----------------------
+# Imported lazily inside the local tools; not needed for stub mode/tests.
+httpx==0.28.1            # fetch_page
+beautifulsoup4==4.14.3  # fetch_page HTML -> text
+ddgs==9.14.4            # web_search (DuckDuckGo, keyless)
+
+# --- Testing -----------------------------------------------------------------
+pytest==9.1.0
+pytest-asyncio==1.4.0   # the async graph + MCP-loader tests
+
+# --- Optional: observability + TLS convenience ------------------------------
+langsmith==0.5.1        # set LANGSMITH_TRACING=true to trace; no code change
+truststore==0.10.4      # makes Python trust the OS cert store (Avast/Zscaler MITM)

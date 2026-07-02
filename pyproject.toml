@@ -1,0 +1,25 @@
+# Minimal project metadata + test configuration.
+#
+# WHY this file:
+# - It points pytest at the src/ layout via `pythonpath`, so tests can simply
+#   `import diligencedesk` with no sys.path hacks or editable install. The "src
+#   layout" keeps the importable package separate from project files, preventing
+#   accidental imports of half-built modules from the repo root.
+# - `pip install -e .` also works for anyone who prefers that.
+
+[project]
+name = "diligencedesk"
+version = "1.0.0"
+description = "A multi-agent (supervisor pattern) company technical-intelligence assistant on LangGraph."
+readme = "README.md"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+# Make src/ importable during tests and keep output focused.
+pythonpath = ["src"]
+testpaths = ["tests"]
+addopts = "-q"
+# asyncio_mode=auto so `async def test_*` functions run without a per-test
+# decorator. Only the MCP test is async (MCP sessions are async); everything else
+# is synchronous because the stub/local graph is synchronous.
+asyncio_mode = "auto"
