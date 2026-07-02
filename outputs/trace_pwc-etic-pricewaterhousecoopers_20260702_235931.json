@@ -1,0 +1,184 @@
+{
+  "company": "PwC ETIC PricewaterhouseCoopers",
+  "target_track": "ai_engineer",
+  "tool_mode": "local",
+  "supervisor": "groq/llama-3.3-70b-versatile",
+  "worker": "groq/llama-3.1-8b-instant",
+  "timestamp": "20260702_235931",
+  "steps": [
+    {
+      "node": "supervisor",
+      "route": "company_research_agent"
+    },
+    {
+      "node": "company_research_agent",
+      "status": [
+        "[company_research_agent] domain=pwc.com; 12 claim(s); 0 product(s); fetched 0 page(s)."
+      ]
+    },
+    {
+      "node": "supervisor",
+      "route": "technical_signals_agent"
+    },
+    {
+      "node": "technical_signals_agent",
+      "status": [
+        "[technical_signals_agent] 3 tech (2 AI/data), 0 track(s) from 0 job(s), 6 eng + 0 OSS, fetched 0 page(s)."
+      ]
+    },
+    {
+      "node": "supervisor",
+      "route": "writer_agent"
+    },
+    {
+      "node": "writer_agent",
+      "status": [
+        "[writer_agent] brief assembled; role_lens=yes; review=False."
+      ]
+    }
+  ],
+  "brief": {
+    "company_name": "PwC ETIC PricewaterhouseCoopers",
+    "company_overview": "PwC's global revenues were US$55.4 billion in FY 2024. PwC's Assurance practice generated $19.5 billion in FY 2024. PwC's Tax and Consulting practice generated $12.6 billion in FY 2024. PwC Egypt Technology and Innovation Centre is a technology hub. The PwC Egypt Technology and Innovation Centre brings together the best of consulting with innovative technologies. Egypt's Technology and Innovation Centre (ETIC) of PwC was opened by the Egyptian Minister of Communications and Information Technology Amr Talaat. PwC's ETIC has $10 million investments. Egypt's Technology and Innovation Center (ETIC) is a technology delivery hub. The ETIC brings together the best of consultancy with innovative technologies to build trust, solve important problems and deliver sustained solutions. The ETIC adds up to PwC's global strategy 'The New Equation'. PwC has been established in the Middle East for 40 years. PwC has more than 12,000 people in 12 countries across the Middle East.",
+    "products_and_services": [],
+    "technical_signals": [
+      {
+        "technology": "Salesforce",
+        "category": "crm",
+        "evidence_type": "job_posting",
+        "evidence_level": "inferred",
+        "source": "https://www.pwc.com/m1/en/careers/egypt-technology-innovation-centre/etic-youth-academy.html",
+        "confidence": 0.5,
+        "notes": "mentioned in a job posting"
+      }
+    ],
+    "ai_and_data_signals": [
+      {
+        "technology": "Machine Learning",
+        "category": "ai_ml",
+        "evidence_type": "official_site",
+        "evidence_level": "confirmed",
+        "source": "https://www.pwc.com/m1/en/services/consulting/technology/artificial-intelligence-everywhere.html",
+        "confidence": 0.9,
+        "notes": "mentioned on the company's official site"
+      },
+      {
+        "technology": "OpenAI",
+        "category": "ai_ml",
+        "evidence_type": "news",
+        "evidence_level": "inferred",
+        "source": "https://www.facebook.com/PwCCareersChannelIslands/posts/were-delighted-to-support-the-g8-ai-sprint-in-guernsey-announced-at-our-2026-sum/1601507025311805/",
+        "confidence": 0.5,
+        "notes": "mentioned in a third-party source"
+      }
+    ],
+    "hiring_tracks": [],
+    "engineering_signals": [
+      {
+        "statement": "Portions of this program may use third-party open source components governed by the respective open source license terms. Please note, when a component is multi ...",
+        "source": "https://pwcplus.de/open-source-license-terms",
+        "confidence": 0.7,
+        "category": "engineering",
+        "evidence_level": "inferred"
+      },
+      {
+        "statement": "© 2024 PricewaterhouseCoopers GmbH Wirtschaftsprüfungsgesellschaft. All rights reserved. PwC refers to the PwC ... github.com/dequelabs/axe-core.git. axe ...",
+        "source": "https://store.pwc.hu/assets/version-license_2024-06-20_103037.txt",
+        "confidence": 0.7,
+        "category": "engineering",
+        "evidence_level": "inferred"
+      },
+      {
+        "statement": "Senior Software Engineer at PwC - ETIC · Experienced Software Engineer with a demonstrated history of working in the information technology and services ...",
+        "source": "https://eg.linkedin.com/in/malak-mohamed",
+        "confidence": 0.7,
+        "category": "engineering",
+        "evidence_level": "inferred"
+      },
+      {
+        "statement": "Dec 18, 2025 ... Ever wondered what a day in the life of a Senior Manager and father of a 3-year-old looks like at PwC Luxembourg? Follow Emmanuel, who heads ...",
+        "source": "https://www.facebook.com/pwc.luxembourg/posts/ever-wondered-what-a-day-in-the-life-of-a-senior-manager-and-father-of-a-3-year-/1538804654914901/",
+        "confidence": 0.7,
+        "category": "engineering",
+        "evidence_level": "inferred"
+      },
+      {
+        "statement": "Mar 31, 2017 ... This year, the projects were executed in collaboration with KPMG, Coca-Cola, Thames and Hudson, PricewaterhouseCoopers (PwC), IHS Markit, ...",
+        "source": "https://blogs.lse.ac.uk/management/2017/03/31/what-is-open-innovation-and-how-can-companies-use-it/",
+        "confidence": 0.7,
+        "category": "engineering",
+        "evidence_level": "inferred"
+      },
+      {
+        "statement": "Jun 5, 2026 ... AI-Powered Consultations: PwC's Bold Leap with OpenAI • Partnership Overview:PricewaterhouseCoopers ... com/elevenlabs-releases-open-source-ui- ...",
+        "source": "https://www.facebook.com/PwCCareersChannelIslands/posts/were-delighted-to-support-the-g8-ai-sprint-in-guernsey-announced-at-our-2026-sum/1601507025311805/",
+        "confidence": 0.7,
+        "category": "engineering",
+        "evidence_level": "inferred"
+      }
+    ],
+    "open_source_signals": [],
+    "uncertainties": [
+      "No products or services were found on the official domain (pwc.com).",
+      "No public hiring-track signals were found (egypt-scoped search across Glassdoor/LinkedIn/Wuzzuf/Bayt)."
+    ],
+    "role_lens": {
+      "target_track": "ai_engineer",
+      "fit_summary": "Based on public signals, PwC ETIC PricewaterhouseCoopers shows Machine Learning, OpenAI, Salesforce. For the 'ai_engineer' track, emphasise the overlapping skills above.",
+      "skills_to_prepare": [
+        "LLMs",
+        "RAG",
+        "prompt engineering",
+        "vector databases",
+        "Python",
+        "evaluation/guardrails",
+        "Machine Learning",
+        "OpenAI",
+        "Salesforce"
+      ],
+      "portfolio_talking_points": [
+        "Show a grounded, evaluated LLM/RAG project with sources and metrics.",
+        "Relate your work to PwC ETIC PricewaterhouseCoopers's stack: Machine Learning, OpenAI, Salesforce."
+      ],
+      "interview_questions_to_prepare": [
+        "How would you design a RAG pipeline and evaluate its groundedness?",
+        "How do you prevent hallucination in a production LLM feature?",
+        "When would you fine-tune vs. use retrieval?",
+        "How does PwC ETIC PricewaterhouseCoopers use Machine Learning in production?"
+      ],
+      "questions_to_ask_company": [
+        "How do you evaluate and monitor your AI features in production?"
+      ],
+      "caveat": "This role lens is an interpretation based on collected public signals, not a directly sourced company statement."
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/PwC",
+      "https://www.pwc.com/m1/en/careers/egypt-technology-innovation-centre.html",
+      "https://itida.gov.eg/English/MediaCenter/News/Pages/Communications-minister-opens-PwC-ETIC-with-dollars-10mn-investments.aspx",
+      "https://www.pwc.com/m1/en/about-us/office-locations-middle-east.html",
+      "https://pwcplus.de/open-source-license-terms",
+      "https://store.pwc.hu/assets/version-license_2024-06-20_103037.txt",
+      "https://eg.linkedin.com/in/malak-mohamed",
+      "https://www.facebook.com/pwc.luxembourg/posts/ever-wondered-what-a-day-in-the-life-of-a-senior-manager-and-father-of-a-3-year-/1538804654914901/",
+      "https://blogs.lse.ac.uk/management/2017/03/31/what-is-open-innovation-and-how-can-companies-use-it/",
+      "https://www.facebook.com/PwCCareersChannelIslands/posts/were-delighted-to-support-the-g8-ai-sprint-in-guernsey-announced-at-our-2026-sum/1601507025311805/",
+      "https://www.pwc.com/m1/en/careers/egypt-technology-innovation-centre/etic-youth-academy.html",
+      "https://www.pwc.com/m1/en/services/consulting/technology/artificial-intelligence-everywhere.html"
+    ],
+    "confidence": 0.86,
+    "needs_human_review": false,
+    "retrieval_stats": {
+      "pages_fetched": 0,
+      "sources": {
+        "third_party": 11,
+        "official": 9,
+        "job_board": 1
+      },
+      "dropped_off_location": 0,
+      "jobs_by_source": {},
+      "location": "egypt",
+      "official_domain": "pwc.com",
+      "search_provider": "serpapi"
+    }
+  }
+}

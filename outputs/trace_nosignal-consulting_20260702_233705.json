@@ -1,0 +1,73 @@
+{
+  "company": "NoSignal Consulting",
+  "target_track": null,
+  "tool_mode": "stub",
+  "supervisor": "stub/gemini-2.5-flash",
+  "worker": "stub/llama-3.1-8b-instant",
+  "timestamp": "20260702_233705",
+  "steps": [
+    {
+      "node": "supervisor",
+      "route": "company_research_agent"
+    },
+    {
+      "node": "company_research_agent",
+      "status": [
+        "[company_research_agent] domain=nosignal-consulting.com; 2 claim(s); 0 product(s); fetched 1 page(s)."
+      ]
+    },
+    {
+      "node": "supervisor",
+      "route": "technical_signals_agent"
+    },
+    {
+      "node": "technical_signals_agent",
+      "status": [
+        "[technical_signals_agent] 0 tech (0 AI/data), 0 track(s) from 0 job(s), 0 eng + 0 OSS, fetched 0 page(s)."
+      ]
+    },
+    {
+      "node": "supervisor",
+      "route": "writer_agent"
+    },
+    {
+      "node": "writer_agent",
+      "status": [
+        "[writer_agent] brief assembled; role_lens=no; review=True."
+      ]
+    }
+  ],
+  "brief": {
+    "company_name": "NoSignal Consulting",
+    "company_overview": "NoSignal Consulting provides general business consulting services. Limited public technical information is available. NoSignal Consulting is a general business consulting firm.",
+    "products_and_services": [],
+    "technical_signals": [],
+    "ai_and_data_signals": [],
+    "hiring_tracks": [],
+    "engineering_signals": [],
+    "open_source_signals": [],
+    "uncertainties": [
+      "No products or services were found on the official domain (nosignal-consulting.com).",
+      "No tech-stack signals were found on the official domain or job boards (egypt-scoped search).",
+      "No AI or data signals were found on the official domain or job boards (egypt-scoped search).",
+      "No public hiring-track signals were found (egypt-scoped search across Glassdoor/LinkedIn/Wuzzuf/Bayt).",
+      "No engineering-blog or open-source signals were found tied to NoSignal Consulting."
+    ],
+    "role_lens": null,
+    "sources": [
+      "https://nosignal-consulting.com/about"
+    ],
+    "confidence": 0.4,
+    "needs_human_review": true,
+    "retrieval_stats": {
+      "pages_fetched": 1,
+      "sources": {
+        "official": 2
+      },
+      "jobs_by_source": {},
+      "location": "egypt",
+      "official_domain": "nosignal-consulting.com",
+      "search_provider": "stub (canned)"
+    }
+  }
+}

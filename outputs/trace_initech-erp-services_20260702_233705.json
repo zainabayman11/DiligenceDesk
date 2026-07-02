@@ -1,0 +1,178 @@
+{
+  "company": "Initech ERP Services",
+  "target_track": "odoo_functional",
+  "tool_mode": "stub",
+  "supervisor": "stub/gemini-2.5-flash",
+  "worker": "stub/llama-3.1-8b-instant",
+  "timestamp": "20260702_233705",
+  "steps": [
+    {
+      "node": "supervisor",
+      "route": "company_research_agent"
+    },
+    {
+      "node": "company_research_agent",
+      "status": [
+        "[company_research_agent] domain=initech-erp.com; 3 claim(s); 1 product(s); fetched 2 page(s)."
+      ]
+    },
+    {
+      "node": "supervisor",
+      "route": "technical_signals_agent"
+    },
+    {
+      "node": "technical_signals_agent",
+      "status": [
+        "[technical_signals_agent] 5 tech (0 AI/data), 2 track(s) from 3 job(s), 0 eng + 1 OSS, fetched 1 page(s)."
+      ]
+    },
+    {
+      "node": "supervisor",
+      "route": "writer_agent"
+    },
+    {
+      "node": "writer_agent",
+      "status": [
+        "[writer_agent] brief assembled; role_lens=yes; review=False."
+      ]
+    }
+  ],
+  "brief": {
+    "company_name": "Initech ERP Services",
+    "company_overview": "Initech ERP Services implements ERP systems. Business model: consulting and implementation billed per project. Initech ERP Services implements and customizes ERP systems for mid-market businesses.",
+    "products_and_services": [
+      "Initech offers Odoo implementation, SAP integration, and workflow automation services."
+    ],
+    "technical_signals": [
+      {
+        "technology": "Python",
+        "category": "language",
+        "evidence_type": "official_site",
+        "evidence_level": "confirmed",
+        "source": "https://initech-erp.com/technology",
+        "confidence": 0.9,
+        "notes": "mentioned on the company's official site"
+      },
+      {
+        "technology": "PostgreSQL",
+        "category": "database",
+        "evidence_type": "official_site",
+        "evidence_level": "confirmed",
+        "source": "https://initech-erp.com/technology",
+        "confidence": 0.9,
+        "notes": "mentioned on the company's official site"
+      },
+      {
+        "technology": "Odoo",
+        "category": "erp",
+        "evidence_type": "official_site",
+        "evidence_level": "confirmed",
+        "source": "https://initech-erp.com/technology",
+        "confidence": 0.9,
+        "notes": "mentioned on the company's official site"
+      },
+      {
+        "technology": "Workflow Automation",
+        "category": "automation",
+        "evidence_type": "official_site",
+        "evidence_level": "confirmed",
+        "source": "https://initech-erp.com/technology",
+        "confidence": 0.9,
+        "notes": "mentioned on the company's official site"
+      },
+      {
+        "technology": "SAP",
+        "category": "erp",
+        "evidence_type": "case_study",
+        "evidence_level": "confirmed",
+        "source": "https://initech-erp.com/customers/manufacturing",
+        "confidence": 0.9,
+        "notes": "mentioned in a company case study"
+      }
+    ],
+    "ai_and_data_signals": [],
+    "hiring_tracks": [
+      {
+        "track": "Odoo / ERP Consultant",
+        "evidence_type": "job_posting",
+        "source": "https://wuzzuf.net/jobs/p/initech-odoo-cairo",
+        "confidence": 0.5,
+        "notes": "wuzzuf: Odoo Functional Consultant"
+      },
+      {
+        "track": "ERP / SAP Consultant",
+        "evidence_type": "job_posting",
+        "source": "https://www.bayt.com/en/egypt/jobs/initech-erp-consultant",
+        "confidence": 0.5,
+        "notes": "bayt: ERP Consultant"
+      }
+    ],
+    "engineering_signals": [],
+    "open_source_signals": [
+      {
+        "statement": "Initech open-source Odoo modules.",
+        "source": "https://github.com/initech-erp/odoo-modules",
+        "confidence": 0.7,
+        "category": "open_source",
+        "evidence_level": "inferred"
+      }
+    ],
+    "uncertainties": [
+      "No AI or data signals were found on the official domain or job boards (egypt-scoped search)."
+    ],
+    "role_lens": {
+      "target_track": "odoo_functional",
+      "fit_summary": "Based on public signals, Initech ERP Services shows Python, PostgreSQL, Odoo, Workflow Automation, SAP. For the 'odoo_functional' track, emphasise the overlapping skills above.",
+      "skills_to_prepare": [
+        "Odoo modules",
+        "business-process mapping",
+        "PostgreSQL",
+        "workflow automation",
+        "ERP integration",
+        "Python",
+        "Odoo",
+        "Workflow Automation",
+        "SAP"
+      ],
+      "portfolio_talking_points": [
+        "Show an ERP/Odoo implementation where you mapped real processes to the system.",
+        "Relate your work to Initech ERP Services's stack: Python, PostgreSQL, Odoo, Workflow Automation."
+      ],
+      "interview_questions_to_prepare": [
+        "How do you translate a business process into Odoo configuration vs. custom code?",
+        "How would you approach an Odoo-to-SAP integration?",
+        "How does Initech ERP Services use Python in production?"
+      ],
+      "questions_to_ask_company": [
+        "Which Odoo modules and integrations are most critical to your clients?"
+      ],
+      "caveat": "This role lens is an interpretation based on collected public signals, not a directly sourced company statement."
+    },
+    "sources": [
+      "https://initech-erp.com/about",
+      "https://initech-erp.com/services",
+      "https://github.com/initech-erp/odoo-modules",
+      "https://initech-erp.com/technology",
+      "https://initech-erp.com/customers/manufacturing",
+      "https://wuzzuf.net/jobs/p/initech-odoo-cairo",
+      "https://www.bayt.com/en/egypt/jobs/initech-erp-consultant"
+    ],
+    "confidence": 0.82,
+    "needs_human_review": false,
+    "retrieval_stats": {
+      "pages_fetched": 3,
+      "sources": {
+        "official": 8,
+        "third_party": 1
+      },
+      "jobs_by_source": {
+        "wuzzuf": 1,
+        "bayt": 1,
+        "glassdoor": 1
+      },
+      "location": "egypt",
+      "official_domain": "initech-erp.com",
+      "search_provider": "stub (canned)"
+    }
+  }
+}

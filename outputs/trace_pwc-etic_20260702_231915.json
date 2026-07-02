@@ -1,0 +1,188 @@
+{
+  "company": "PwC ETIC",
+  "target_track": "ai_engineer",
+  "tool_mode": "local",
+  "supervisor": "groq/llama-3.3-70b-versatile",
+  "worker": "groq/llama-3.1-8b-instant",
+  "timestamp": "20260702_231915",
+  "steps": [
+    {
+      "node": "supervisor",
+      "route": "company_research_agent"
+    },
+    {
+      "node": "company_research_agent",
+      "status": [
+        "[company_research_agent] domain=pwc.com; 6 claim(s); 1 product(s); fetched 0 page(s)."
+      ]
+    },
+    {
+      "node": "supervisor",
+      "route": "technical_signals_agent"
+    },
+    {
+      "node": "technical_signals_agent",
+      "status": [
+        "[technical_signals_agent] 2 tech (2 AI/data), 4 track(s) from 10 job(s), 1 eng + 2 OSS, fetched 0 page(s)."
+      ]
+    },
+    {
+      "node": "supervisor",
+      "route": "writer_agent"
+    },
+    {
+      "node": "writer_agent",
+      "status": [
+        "[writer_agent] brief assembled; role_lens=yes; review=False."
+      ]
+    }
+  ],
+  "brief": {
+    "company_name": "PwC ETIC",
+    "company_overview": "Egypt's Technology and Innovation Center (ETIC) is a technology delivery hub bringing together the best of consultancy with innovative technologies to build solutions. The Minister of Communications and Information Technology Amr Talaat has opened Egypt's Technology and Innovation Centre (ETIC) of PwC with 10M Dollars Investments. PwC Egypt Technology and Innovation Center (ETIC) is a technology hub that brings together the best of consultancy and innovative technologies. The PwC-ETIC Agentic Salesforce Bootcamp is a gateway to innovation, impact and hands-on, real-world learning. PwC leverages leading practices and integrated solutions powered by PwC’s alliances and partners including SAP, Microsoft, Amazon, Oracle and Salesforce.",
+    "products_and_services": [
+      "PwC offers products and technology solutions that combine PwC’s real-world experience and industry leading technologies to solve unique business challenges."
+    ],
+    "technical_signals": [],
+    "ai_and_data_signals": [
+      {
+        "technology": "Machine Learning",
+        "category": "ai_ml",
+        "evidence_type": "official_site",
+        "evidence_level": "confirmed",
+        "source": "https://www.pwc.com/us/en/services/managed-services/technology/artificial-intelligence.html",
+        "confidence": 0.9,
+        "notes": "mentioned on the company's official site"
+      },
+      {
+        "technology": "LLM",
+        "category": "ai_ml",
+        "evidence_type": "news",
+        "evidence_level": "inferred",
+        "source": "https://thecode.media/ai-github-repositories-2026/",
+        "confidence": 0.5,
+        "notes": "mentioned in a third-party source"
+      }
+    ],
+    "hiring_tracks": [
+      {
+        "track": "DevOps / Platform Engineer",
+        "evidence_type": "job_posting",
+        "source": "https://www.glassdoor.com/Job/devops-engineer-jobs-SRCH_IM1175_KO0,15.htm",
+        "confidence": 0.5,
+        "notes": "glassdoor: 0 devops engineer Jobs in Cairo, Egypt, July 2026 | Glassdoor"
+      },
+      {
+        "track": "AI Engineer",
+        "evidence_type": "job_posting",
+        "source": "https://eg.linkedin.com/jobs/view/etic-ai-engineer-associate-at-pwc-4291259932",
+        "confidence": 0.5,
+        "notes": "linkedin: تقوم شركة PwC بالتوظيف لوظيفة ETIC, AI Engineer... | LinkedIn"
+      },
+      {
+        "track": "Data Engineer",
+        "evidence_type": "job_posting",
+        "source": "https://eg.linkedin.com/jobs/view/etic-data-engineering-intern-at-pwc-4348068359",
+        "confidence": 0.5,
+        "notes": "linkedin: تقوم شركة PwC بالتوظيف لوظيفة ETIC, Data Engineering..."
+      },
+      {
+        "track": "Software Engineer",
+        "evidence_type": "job_posting",
+        "source": "https://www.bayt.com/en/egypt/jobs/etic-software-testing-manager-73360749/",
+        "confidence": 0.5,
+        "notes": "bayt: ETIC, Software Testing Manager at PwC - Cairo - Bayt.com"
+      }
+    ],
+    "engineering_signals": [
+      {
+        "statement": "Ensure your professional resume highlights your major, cloud project repositories (such as GitHub link), and your 2026 graduation timeline flawlessly before executing your digital application. Official Application Link: Apply for PwC ETIC Cloud Engin...",
+        "source": "https://www.jobstation-eg.org/2026/06/pwc-etic-cloud-engineering-internship.html",
+        "confidence": 0.7,
+        "category": "engineering",
+        "evidence_level": "inferred"
+      }
+    ],
+    "open_source_signals": [
+      {
+        "statement": "Contribute to PWC-ETIC-INT/test_package development by creating an account on GitHub.Search code, repositories, users, issues, pull requests...",
+        "source": "https://github.com/PWC-ETIC-INT/test_package",
+        "confidence": 0.7,
+        "category": "open_source",
+        "evidence_level": "inferred"
+      },
+      {
+        "statement": "GitHub SponsorsFund open source developers. PROGRAMS.PWC-ETIC-INT / Visibility-test Public. Notifications You must be signed in to change notification settings.",
+        "source": "https://github.com/PWC-ETIC-INT/Visibility-test",
+        "confidence": 0.7,
+        "category": "open_source",
+        "evidence_level": "inferred"
+      }
+    ],
+    "uncertainties": [
+      "No tech-stack signals were found on the official domain or job boards (egypt-scoped search)."
+    ],
+    "role_lens": {
+      "target_track": "ai_engineer",
+      "fit_summary": "Based on public signals, PwC ETIC shows Machine Learning, LLM. For the 'ai_engineer' track, emphasise the overlapping skills above.",
+      "skills_to_prepare": [
+        "LLMs",
+        "RAG",
+        "prompt engineering",
+        "vector databases",
+        "Python",
+        "evaluation/guardrails",
+        "Machine Learning",
+        "LLM"
+      ],
+      "portfolio_talking_points": [
+        "Show a grounded, evaluated LLM/RAG project with sources and metrics.",
+        "Relate your work to PwC ETIC's stack: Machine Learning, LLM."
+      ],
+      "interview_questions_to_prepare": [
+        "How would you design a RAG pipeline and evaluate its groundedness?",
+        "How do you prevent hallucination in a production LLM feature?",
+        "When would you fine-tune vs. use retrieval?",
+        "How does PwC ETIC use Machine Learning in production?"
+      ],
+      "questions_to_ask_company": [
+        "How do you evaluate and monitor your AI features in production?"
+      ],
+      "caveat": "This role lens is an interpretation based on collected public signals, not a directly sourced company statement."
+    },
+    "sources": [
+      "https://www.pwc.com/m1/en/careers/egypt-technology-innovation-centre.html",
+      "https://itida.gov.eg/English/MediaCenter/Announcements/Pages/ICT-Minister-Opens-PwC-ETIC-with-10M-Dollars-Investments.aspx",
+      "https://www.amcham.org.eg/recruitment/employers/6278/pwc-etic",
+      "https://www.pwc.com/m1/en/careers/egypt-technology-innovation-centre/etic-youth-academy.html",
+      "https://www.pwc.com/us/en/products.html",
+      "https://www.jobstation-eg.org/2026/06/pwc-etic-cloud-engineering-internship.html",
+      "https://github.com/PWC-ETIC-INT/test_package",
+      "https://github.com/PWC-ETIC-INT/Visibility-test",
+      "https://www.pwc.com/us/en/services/managed-services/technology/artificial-intelligence.html",
+      "https://thecode.media/ai-github-repositories-2026/",
+      "https://www.glassdoor.com/Job/devops-engineer-jobs-SRCH_IM1175_KO0,15.htm",
+      "https://eg.linkedin.com/jobs/view/etic-ai-engineer-associate-at-pwc-4291259932",
+      "https://eg.linkedin.com/jobs/view/etic-data-engineering-intern-at-pwc-4348068359",
+      "https://www.bayt.com/en/egypt/jobs/etic-software-testing-manager-73360749/"
+    ],
+    "confidence": 0.86,
+    "needs_human_review": false,
+    "retrieval_stats": {
+      "pages_fetched": 0,
+      "sources": {
+        "official": 5,
+        "third_party": 6
+      },
+      "jobs_by_source": {
+        "glassdoor": 3,
+        "linkedin": 3,
+        "wuzzuf": 1,
+        "bayt": 3
+      },
+      "location": "egypt",
+      "official_domain": "pwc.com",
+      "search_provider": "tavily"
+    }
+  }
+}

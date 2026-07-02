@@ -1,0 +1,261 @@
+{
+  "company": "Acme AI Health",
+  "target_track": "ai_engineer",
+  "tool_mode": "stub",
+  "supervisor": "stub/gemini-2.5-flash",
+  "worker": "stub/llama-3.1-8b-instant",
+  "timestamp": "20260702_233705",
+  "steps": [
+    {
+      "node": "supervisor",
+      "route": "company_research_agent"
+    },
+    {
+      "node": "company_research_agent",
+      "status": [
+        "[company_research_agent] domain=acme-ai-health.com; 5 claim(s); 2 product(s); fetched 2 page(s)."
+      ]
+    },
+    {
+      "node": "supervisor",
+      "route": "technical_signals_agent"
+    },
+    {
+      "node": "technical_signals_agent",
+      "status": [
+        "[technical_signals_agent] 11 tech (6 AI/data), 3 track(s) from 4 job(s), 1 eng + 1 OSS, fetched 2 page(s)."
+      ]
+    },
+    {
+      "node": "supervisor",
+      "route": "writer_agent"
+    },
+    {
+      "node": "writer_agent",
+      "status": [
+        "[writer_agent] brief assembled; role_lens=yes; review=False."
+      ]
+    }
+  ],
+  "brief": {
+    "company_name": "Acme AI Health",
+    "company_overview": "Acme AI Health builds AI-powered clinical decision-support software. Its business model is SaaS subscriptions sold to hospitals and clinics. Acme AI Health builds AI-powered clinical decision-support software for hospitals and clinics. Acme AI Health is a health-technology company.",
+    "products_and_services": [
+      "Acme AI Health's products include a clinical chatbot, a RAG-based medical knowledge assistant, and a patient triage platform.",
+      "Acme offers an AI documentation assistant and analytics dashboards for clinics."
+    ],
+    "technical_signals": [
+      {
+        "technology": "Python",
+        "category": "language",
+        "evidence_type": "engineering_blog",
+        "evidence_level": "confirmed",
+        "source": "https://acme-ai-health.com/engineering",
+        "confidence": 0.9,
+        "notes": "mentioned on the company's engineering page"
+      },
+      {
+        "technology": "FastAPI",
+        "category": "framework",
+        "evidence_type": "engineering_blog",
+        "evidence_level": "confirmed",
+        "source": "https://acme-ai-health.com/engineering",
+        "confidence": 0.9,
+        "notes": "mentioned on the company's engineering page"
+      },
+      {
+        "technology": "AWS",
+        "category": "cloud",
+        "evidence_type": "engineering_blog",
+        "evidence_level": "confirmed",
+        "source": "https://acme-ai-health.com/engineering",
+        "confidence": 0.9,
+        "notes": "mentioned on the company's engineering page"
+      },
+      {
+        "technology": "PostgreSQL",
+        "category": "database",
+        "evidence_type": "engineering_blog",
+        "evidence_level": "confirmed",
+        "source": "https://acme-ai-health.com/engineering",
+        "confidence": 0.9,
+        "notes": "mentioned on the company's engineering page"
+      },
+      {
+        "technology": "Kubernetes",
+        "category": "devops",
+        "evidence_type": "news",
+        "evidence_level": "inferred",
+        "source": "https://www.wsj.com/articles/acme-ai-health-tech",
+        "confidence": 0.5,
+        "notes": "mentioned in a third-party source"
+      }
+    ],
+    "ai_and_data_signals": [
+      {
+        "technology": "RAG",
+        "category": "ai_ml",
+        "evidence_type": "engineering_blog",
+        "evidence_level": "confirmed",
+        "source": "https://acme-ai-health.com/engineering/ai",
+        "confidence": 0.9,
+        "notes": "mentioned on the company's engineering page"
+      },
+      {
+        "technology": "LLM",
+        "category": "ai_ml",
+        "evidence_type": "engineering_blog",
+        "evidence_level": "confirmed",
+        "source": "https://acme-ai-health.com/engineering/ai",
+        "confidence": 0.9,
+        "notes": "mentioned on the company's engineering page"
+      },
+      {
+        "technology": "Vector Database",
+        "category": "ai_ml",
+        "evidence_type": "engineering_blog",
+        "evidence_level": "confirmed",
+        "source": "https://acme-ai-health.com/engineering/ai",
+        "confidence": 0.9,
+        "notes": "mentioned on the company's engineering page"
+      },
+      {
+        "technology": "TensorFlow",
+        "category": "ai_ml",
+        "evidence_type": "news",
+        "evidence_level": "inferred",
+        "source": "https://www.wsj.com/articles/acme-ai-health-tech",
+        "confidence": 0.5,
+        "notes": "mentioned in a third-party source"
+      },
+      {
+        "technology": "Machine Learning",
+        "category": "ai_ml",
+        "evidence_type": "news",
+        "evidence_level": "inferred",
+        "source": "https://towardsai.net/p/acme-ml",
+        "confidence": 0.5,
+        "notes": "mentioned in a third-party source"
+      },
+      {
+        "technology": "NLP",
+        "category": "ai_ml",
+        "evidence_type": "news",
+        "evidence_level": "inferred",
+        "source": "https://towardsai.net/p/acme-ml",
+        "confidence": 0.5,
+        "notes": "mentioned in a third-party source"
+      }
+    ],
+    "hiring_tracks": [
+      {
+        "track": "AI Engineer",
+        "evidence_type": "job_posting",
+        "source": "https://www.glassdoor.com/job-listing/mle-acme-egypt",
+        "confidence": 0.5,
+        "notes": "glassdoor: Machine Learning Engineer"
+      },
+      {
+        "track": "Data Engineer",
+        "evidence_type": "job_posting",
+        "source": "https://www.linkedin.com/jobs/view/acme-data-engineer-egypt",
+        "confidence": 0.5,
+        "notes": "linkedin: Data Engineer"
+      },
+      {
+        "track": "Software Engineer",
+        "evidence_type": "job_posting",
+        "source": "https://wuzzuf.net/jobs/p/acme-backend-developer-cairo-egypt",
+        "confidence": 0.5,
+        "notes": "wuzzuf: Backend Developer"
+      }
+    ],
+    "engineering_signals": [
+      {
+        "statement": "Building a HIPAA-compliant RAG pipeline at Acme AI Health.",
+        "source": "https://acme-ai-health.com/engineering/blog/rag-pipeline",
+        "confidence": 0.7,
+        "category": "engineering",
+        "evidence_level": "confirmed"
+      }
+    ],
+    "open_source_signals": [
+      {
+        "statement": "Acme AI Health open-source clinical NLP tools.",
+        "source": "https://github.com/acme-ai-health/clinical-nlp",
+        "confidence": 0.7,
+        "category": "open_source",
+        "evidence_level": "inferred"
+      }
+    ],
+    "uncertainties": [],
+    "role_lens": {
+      "target_track": "ai_engineer",
+      "fit_summary": "Based on public signals, Acme AI Health shows RAG, LLM, Vector Database, TensorFlow, Machine Learning. For the 'ai_engineer' track, emphasise the overlapping skills above.",
+      "skills_to_prepare": [
+        "LLMs",
+        "RAG",
+        "prompt engineering",
+        "vector databases",
+        "Python",
+        "evaluation/guardrails",
+        "LLM",
+        "Vector Database",
+        "TensorFlow",
+        "Machine Learning",
+        "NLP",
+        "FastAPI",
+        "AWS",
+        "PostgreSQL",
+        "Kubernetes"
+      ],
+      "portfolio_talking_points": [
+        "Show a grounded, evaluated LLM/RAG project with sources and metrics.",
+        "Relate your work to Acme AI Health's stack: RAG, LLM, Vector Database, TensorFlow."
+      ],
+      "interview_questions_to_prepare": [
+        "How would you design a RAG pipeline and evaluate its groundedness?",
+        "How do you prevent hallucination in a production LLM feature?",
+        "When would you fine-tune vs. use retrieval?",
+        "How does Acme AI Health use RAG in production?"
+      ],
+      "questions_to_ask_company": [
+        "How do you evaluate and monitor your AI features in production?"
+      ],
+      "caveat": "This role lens is an interpretation based on collected public signals, not a directly sourced company statement."
+    },
+    "sources": [
+      "https://acme-ai-health.com/about",
+      "https://acme-ai-health.com/products",
+      "https://en.wikipedia.org/wiki/Acme_AI_Health",
+      "https://acme-ai-health.com/solutions",
+      "https://acme-ai-health.com/engineering/blog/rag-pipeline",
+      "https://github.com/acme-ai-health/clinical-nlp",
+      "https://acme-ai-health.com/engineering",
+      "https://acme-ai-health.com/engineering/ai",
+      "https://www.wsj.com/articles/acme-ai-health-tech",
+      "https://towardsai.net/p/acme-ml",
+      "https://www.glassdoor.com/job-listing/mle-acme-egypt",
+      "https://www.linkedin.com/jobs/view/acme-data-engineer-egypt",
+      "https://wuzzuf.net/jobs/p/acme-backend-developer-cairo-egypt"
+    ],
+    "confidence": 0.74,
+    "needs_human_review": false,
+    "retrieval_stats": {
+      "pages_fetched": 4,
+      "sources": {
+        "official": 12,
+        "third_party": 6
+      },
+      "jobs_by_source": {
+        "glassdoor": 1,
+        "linkedin": 1,
+        "wuzzuf": 1,
+        "bayt": 1
+      },
+      "location": "egypt",
+      "official_domain": "acme-ai-health.com",
+      "search_provider": "stub (canned)"
+    }
+  }
+}

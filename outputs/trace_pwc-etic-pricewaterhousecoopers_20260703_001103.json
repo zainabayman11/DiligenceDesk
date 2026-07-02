@@ -1,0 +1,223 @@
+{
+  "company": "PwC ETIC PricewaterhouseCoopers",
+  "target_track": "ai_engineer",
+  "tool_mode": "local",
+  "supervisor": "groq/llama-3.3-70b-versatile",
+  "worker": "groq/llama-3.1-8b-instant",
+  "timestamp": "20260703_001103",
+  "steps": [
+    {
+      "node": "supervisor",
+      "route": "company_research_agent"
+    },
+    {
+      "node": "company_research_agent",
+      "status": [
+        "[company_research_agent] domain=pwc.com; 11 claim(s); 0 product(s); fetched 0 page(s)."
+      ]
+    },
+    {
+      "node": "supervisor",
+      "route": "technical_signals_agent"
+    },
+    {
+      "node": "technical_signals_agent",
+      "status": [
+        "[technical_signals_agent] 3 tech (2 AI/data), 3 track(s) from 12 job(s), 6 eng + 1 OSS, fetched 0 page(s)."
+      ]
+    },
+    {
+      "node": "supervisor",
+      "route": "writer_agent"
+    },
+    {
+      "node": "writer_agent",
+      "status": [
+        "[writer_agent] brief assembled; role_lens=yes; review=False."
+      ]
+    }
+  ],
+  "brief": {
+    "company_name": "PwC ETIC PricewaterhouseCoopers",
+    "company_overview": "PwC's global revenues were US$55.4 billion in FY 2024. PwC's Assurance practice generated $19.5 billion in FY 2024. PwC's Tax and Consulting practice generated $12.6 billion in FY 2024. PwC Egypt Technology and Innovation Centre is a technology hub. Egypt's Technology and Innovation Centre (ETIC) of PwC was opened by the Egyptian Minister of Communications and Information Technology Amr Talaat. PwC has an office location in New Cairo, Egypt. The Egyptian Minister of Communications and Information Technology Amr Talaat opened Egypt's Technology and Innovation Centre (ETIC) of PwC with $10 million investments. Egypt's Technology and Innovation Center (ETIC) is a technology delivery hub. PwC has more than 12,000 people in 12 countries across the Middle East region. PwC has been established in the region for 40 years. The PwC-ETIC (Egypt Technology and Innovation Centre) Agentic Salesforce Bootcamp is a program for innovation, impact, and hands-on learning.",
+    "products_and_services": [],
+    "technical_signals": [
+      {
+        "technology": "Salesforce",
+        "category": "crm",
+        "evidence_type": "job_posting",
+        "evidence_level": "inferred",
+        "source": "https://www.pwc.com/m1/en/careers/egypt-technology-innovation-centre/etic-youth-academy.html",
+        "confidence": 0.5,
+        "notes": "mentioned in a job posting"
+      }
+    ],
+    "ai_and_data_signals": [
+      {
+        "technology": "Spark",
+        "category": "data",
+        "evidence_type": "job_posting",
+        "evidence_level": "inferred",
+        "source": "https://www.pwc.com/m1/en/careers/egypt-technology-innovation-centre/etic-youth-academy.html",
+        "confidence": 0.5,
+        "notes": "mentioned in a job posting"
+      },
+      {
+        "technology": "Machine Learning",
+        "category": "ai_ml",
+        "evidence_type": "official_site",
+        "evidence_level": "confirmed",
+        "source": "https://www.pwc.com/m1/en/services/consulting/technology/artificial-intelligence-everywhere.html",
+        "confidence": 0.9,
+        "notes": "mentioned on the company's official site"
+      }
+    ],
+    "hiring_tracks": [
+      {
+        "track": "DevOps / Platform Engineer",
+        "evidence_type": "job_posting",
+        "source": "https://www.glassdoor.com/Job/devops-engineer-jobs-SRCH_IM1175_KO0,15.htm",
+        "confidence": 0.5,
+        "notes": "glassdoor: 0 devops engineer Jobs in Cairo, Egypt, July 2026 | Glassdoor"
+      },
+      {
+        "track": "AI Engineer",
+        "evidence_type": "job_posting",
+        "source": "https://www.linkedin.com/jobs/view/4371476154/",
+        "confidence": 0.5,
+        "notes": "linkedin: PwC hiring ETIC, AI Engineer - Manager in Cairo, Cairo, Egypt ..."
+      },
+      {
+        "track": "Software Engineer",
+        "evidence_type": "job_posting",
+        "source": "https://www.bayt.com/en/egypt/jobs/telecommunications-engineer-jobs/?jobId=66402200",
+        "confidence": 0.5,
+        "notes": "bayt: Telecommunications Engineer Jobs in Egypt (March 2023) - Bayt.com"
+      }
+    ],
+    "engineering_signals": [
+      {
+        "statement": "في هندسة الصوت في PwC، ستركز على العملية التقنية والإبداعية لتسجيل الصوت ومعالجته ومزجه وإعادة إنتاجه.التدريب الصيفي في التطوير المخصص من مكتب برايس ووترهاوس كوبرز مصر PWC Egypt ETIC, Summer Internship – Custom Development.",
+        "source": "https://egyincs.com/opportunities/pwc-etic-software-testing-internship/",
+        "confidence": 0.7,
+        "category": "engineering",
+        "evidence_level": "inferred"
+      },
+      {
+        "statement": "PwC’s AI performance study. Now’s the time to move beyond bold ideas, turning new opportunities into action as industries converge. That means using technology to accelerate progress and unlock new sources of value and growth.",
+        "source": "https://www.pwc.com/",
+        "confidence": 0.7,
+        "category": "engineering",
+        "evidence_level": "confirmed"
+      },
+      {
+        "statement": "Through ETIC, PwC seeks to foster innovation, application and provision of digital solutions in key areas, such as cloud services, data analytics, and cybersecurity, in the Egyptian market and export them to PwC clients in the Middle East and Europe markets.",
+        "source": "https://itida.gov.eg/English/MediaCenter/News/Pages/Communications-minister-opens-PwC-ETIC-with-dollars-10mn-investments.aspx",
+        "confidence": 0.7,
+        "category": "engineering",
+        "evidence_level": "inferred"
+      },
+      {
+        "statement": "About PwC ETIC - Egypt Technology and Innovation Centre. PwC is opening a new Technology & Innovation Center in Cairo that will deliver high quality technology solutions to consulting Clients across the globe. The Centre will provide a broad suite of skills and services to our clients...",
+        "source": "https://swooped.co/job-postings/etic-cyber-security-cloud-security-graduate-program-cairo-etic-pwc-c7e1b",
+        "confidence": 0.7,
+        "category": "engineering",
+        "evidence_level": "inferred"
+      },
+      {
+        "statement": "Company: PwC Egypt Technology & Innovation Center (ETIC). Track Available: Technical Cloud Engineering & Infrastructure Support. Job Family Classification: Contingent Workforce Group.",
+        "source": "https://www.jobstation-eg.org/2026/06/pwc-etic-cloud-engineering-internship.html",
+        "confidence": 0.7,
+        "category": "engineering",
+        "evidence_level": "inferred"
+      },
+      {
+        "statement": "The PwC ETIC is looking for an experienced Applied AI Solution Architect to join our team. The successful candidate will be an integral part of our team and will be responsible for providing technical consulting services to our clients.",
+        "source": "https://ai-search.io/job-board/pricewaterhousecoopers-etic-ai-solution-architect---manager-20251111",
+        "confidence": 0.7,
+        "category": "engineering",
+        "evidence_level": "inferred"
+      }
+    ],
+    "open_source_signals": [
+      {
+        "statement": "Contribute to PWC-ETIC-INT/test_package development by creating an account on GitHub.",
+        "source": "https://github.com/PWC-ETIC-INT/test_package",
+        "confidence": 0.7,
+        "category": "open_source",
+        "evidence_level": "inferred"
+      }
+    ],
+    "uncertainties": [
+      "No products or services were found on the official domain (pwc.com)."
+    ],
+    "role_lens": {
+      "target_track": "ai_engineer",
+      "fit_summary": "Based on public signals, PwC ETIC PricewaterhouseCoopers shows Spark, Machine Learning, Salesforce. For the 'ai_engineer' track, emphasise the overlapping skills above.",
+      "skills_to_prepare": [
+        "LLMs",
+        "RAG",
+        "prompt engineering",
+        "vector databases",
+        "Python",
+        "evaluation/guardrails",
+        "Spark",
+        "Machine Learning",
+        "Salesforce"
+      ],
+      "portfolio_talking_points": [
+        "Show a grounded, evaluated LLM/RAG project with sources and metrics.",
+        "Relate your work to PwC ETIC PricewaterhouseCoopers's stack: Spark, Machine Learning, Salesforce."
+      ],
+      "interview_questions_to_prepare": [
+        "How would you design a RAG pipeline and evaluate its groundedness?",
+        "How do you prevent hallucination in a production LLM feature?",
+        "When would you fine-tune vs. use retrieval?",
+        "How does PwC ETIC PricewaterhouseCoopers use Spark in production?"
+      ],
+      "questions_to_ask_company": [
+        "How do you evaluate and monitor your AI features in production?"
+      ],
+      "caveat": "This role lens is an interpretation based on collected public signals, not a directly sourced company statement."
+    },
+    "sources": [
+      "https://en.wikipedia.org/wiki/PwC",
+      "https://www.pwc.com/m1/en/careers/egypt-technology-innovation-centre.html",
+      "https://itida.gov.eg/English/MediaCenter/News/Pages/Communications-minister-opens-PwC-ETIC-with-dollars-10mn-investments.aspx",
+      "https://www.pwc.com/m1/en/about-us/office-locations-middle-east/egypt.html",
+      "https://itida.gov.eg/English/MediaCenter/Announcements/Pages/ICT-Minister-Opens-PwC-ETIC-with-10M-Dollars-Investments.aspx",
+      "https://www.pwc.com/m1/en/about-us/office-locations-middle-east.html",
+      "https://www.strategyand.pwc.com/m1/en/egypt.html",
+      "https://www.pwc.com/m1/en/careers/egypt-technology-innovation-centre/etic-youth-academy.html",
+      "https://egyincs.com/opportunities/pwc-etic-software-testing-internship/",
+      "https://www.pwc.com/",
+      "https://swooped.co/job-postings/etic-cyber-security-cloud-security-graduate-program-cairo-etic-pwc-c7e1b",
+      "https://www.jobstation-eg.org/2026/06/pwc-etic-cloud-engineering-internship.html",
+      "https://ai-search.io/job-board/pricewaterhousecoopers-etic-ai-solution-architect---manager-20251111",
+      "https://github.com/PWC-ETIC-INT/test_package",
+      "https://www.pwc.com/m1/en/services/consulting/technology/artificial-intelligence-everywhere.html",
+      "https://www.glassdoor.com/Job/devops-engineer-jobs-SRCH_IM1175_KO0,15.htm",
+      "https://www.linkedin.com/jobs/view/4371476154/",
+      "https://www.bayt.com/en/egypt/jobs/telecommunications-engineer-jobs/?jobId=66402200"
+    ],
+    "confidence": 0.85,
+    "needs_human_review": false,
+    "retrieval_stats": {
+      "pages_fetched": 0,
+      "sources": {
+        "third_party": 11,
+        "official": 10
+      },
+      "dropped_off_location": 0,
+      "jobs_by_source": {
+        "glassdoor": 3,
+        "linkedin": 3,
+        "wuzzuf": 3,
+        "bayt": 3
+      },
+      "location": "egypt",
+      "official_domain": "pwc.com",
+      "search_provider": "serpapi"
+    }
+  }
+}

@@ -1,0 +1,216 @@
+{
+  "company": "Globex Cloud Systems",
+  "target_track": null,
+  "tool_mode": "stub",
+  "supervisor": "stub/gemini-2.5-flash",
+  "worker": "stub/llama-3.1-8b-instant",
+  "timestamp": "20260702_233705",
+  "steps": [
+    {
+      "node": "supervisor",
+      "route": "company_research_agent"
+    },
+    {
+      "node": "company_research_agent",
+      "status": [
+        "[company_research_agent] domain=globex-cloud.com; 4 claim(s); 1 product(s); fetched 2 page(s)."
+      ]
+    },
+    {
+      "node": "supervisor",
+      "route": "technical_signals_agent"
+    },
+    {
+      "node": "technical_signals_agent",
+      "status": [
+        "[technical_signals_agent] 11 tech (0 AI/data), 2 track(s) from 4 job(s), 1 eng + 1 OSS, fetched 2 page(s)."
+      ]
+    },
+    {
+      "node": "supervisor",
+      "route": "writer_agent"
+    },
+    {
+      "node": "writer_agent",
+      "status": [
+        "[writer_agent] brief assembled; role_lens=no; review=False."
+      ]
+    }
+  ],
+  "brief": {
+    "company_name": "Globex Cloud Systems",
+    "company_overview": "Globex Cloud Systems provides backend and cloud infrastructure. Business model: usage-based managed services and enterprise support contracts. Globex Cloud Systems provides large-scale backend and cloud infrastructure services for enterprises. Globex Cloud Systems, an infrastructure provider, expanded its platform.",
+    "products_and_services": [
+      "Globex Cloud Systems offers managed Kubernetes, observability, and microservices platforms."
+    ],
+    "technical_signals": [
+      {
+        "technology": "Java",
+        "category": "language",
+        "evidence_type": "engineering_blog",
+        "evidence_level": "confirmed",
+        "source": "https://globex-cloud.com/engineering",
+        "confidence": 0.9,
+        "notes": "mentioned on the company's engineering page"
+      },
+      {
+        "technology": "Spring Boot",
+        "category": "framework",
+        "evidence_type": "engineering_blog",
+        "evidence_level": "confirmed",
+        "source": "https://globex-cloud.com/engineering",
+        "confidence": 0.9,
+        "notes": "mentioned on the company's engineering page"
+      },
+      {
+        "technology": "Microservices",
+        "category": "backend",
+        "evidence_type": "engineering_blog",
+        "evidence_level": "confirmed",
+        "source": "https://globex-cloud.com/engineering",
+        "confidence": 0.9,
+        "notes": "mentioned on the company's engineering page"
+      },
+      {
+        "technology": "AWS",
+        "category": "cloud",
+        "evidence_type": "engineering_blog",
+        "evidence_level": "confirmed",
+        "source": "https://globex-cloud.com/engineering",
+        "confidence": 0.9,
+        "notes": "mentioned on the company's engineering page"
+      },
+      {
+        "technology": "Kubernetes",
+        "category": "devops",
+        "evidence_type": "engineering_blog",
+        "evidence_level": "confirmed",
+        "source": "https://globex-cloud.com/engineering",
+        "confidence": 0.9,
+        "notes": "mentioned on the company's engineering page"
+      },
+      {
+        "technology": "REST API",
+        "category": "backend",
+        "evidence_type": "docs",
+        "evidence_level": "confirmed",
+        "source": "https://globex-cloud.com/docs/api",
+        "confidence": 0.9,
+        "notes": "mentioned in the company's docs"
+      },
+      {
+        "technology": "gRPC",
+        "category": "backend",
+        "evidence_type": "docs",
+        "evidence_level": "confirmed",
+        "source": "https://globex-cloud.com/docs/api",
+        "confidence": 0.9,
+        "notes": "mentioned in the company's docs"
+      },
+      {
+        "technology": "Prometheus",
+        "category": "devops",
+        "evidence_type": "engineering_blog",
+        "evidence_level": "confirmed",
+        "source": "https://globex-cloud.com/engineering/blog/k8s-scale",
+        "confidence": 0.9,
+        "notes": "mentioned on the company's engineering page"
+      },
+      {
+        "technology": "Grafana",
+        "category": "devops",
+        "evidence_type": "engineering_blog",
+        "evidence_level": "confirmed",
+        "source": "https://globex-cloud.com/engineering/blog/k8s-scale",
+        "confidence": 0.9,
+        "notes": "mentioned on the company's engineering page"
+      },
+      {
+        "technology": "Observability",
+        "category": "devops",
+        "evidence_type": "engineering_blog",
+        "evidence_level": "confirmed",
+        "source": "https://globex-cloud.com/engineering/blog/k8s-scale",
+        "confidence": 0.9,
+        "notes": "mentioned on the company's engineering page"
+      },
+      {
+        "technology": "Terraform",
+        "category": "devops",
+        "evidence_type": "github",
+        "evidence_level": "inferred",
+        "source": "https://github.com/globex-cloud/terraform-modules",
+        "confidence": 0.5,
+        "notes": "mentioned in a GitHub repository"
+      }
+    ],
+    "ai_and_data_signals": [],
+    "hiring_tracks": [
+      {
+        "track": "Backend Engineer",
+        "evidence_type": "job_posting",
+        "source": "https://www.glassdoor.com/job-listing/backend-globex-egypt",
+        "confidence": 0.5,
+        "notes": "glassdoor: Backend Engineer"
+      },
+      {
+        "track": "DevOps / Platform Engineer",
+        "evidence_type": "job_posting",
+        "source": "https://wuzzuf.net/jobs/p/globex-devops-cairo",
+        "confidence": 0.5,
+        "notes": "wuzzuf: DevOps Engineer"
+      }
+    ],
+    "engineering_signals": [
+      {
+        "statement": "Running Kubernetes at scale with observability via Prometheus and Grafana at Globex.",
+        "source": "https://globex-cloud.com/engineering/blog/k8s-scale",
+        "confidence": 0.7,
+        "category": "engineering",
+        "evidence_level": "confirmed"
+      }
+    ],
+    "open_source_signals": [
+      {
+        "statement": "Globex Cloud Systems open-source Terraform modules.",
+        "source": "https://github.com/globex-cloud/terraform-modules",
+        "confidence": 0.7,
+        "category": "open_source",
+        "evidence_level": "inferred"
+      }
+    ],
+    "uncertainties": [
+      "No AI or data signals were found on the official domain or job boards (egypt-scoped search)."
+    ],
+    "role_lens": null,
+    "sources": [
+      "https://globex-cloud.com/about",
+      "https://globex-cloud.com/products",
+      "https://techcrunch.com/globex-cloud-systems",
+      "https://globex-cloud.com/engineering/blog/k8s-scale",
+      "https://github.com/globex-cloud/terraform-modules",
+      "https://globex-cloud.com/engineering",
+      "https://globex-cloud.com/docs/api",
+      "https://www.glassdoor.com/job-listing/backend-globex-egypt",
+      "https://wuzzuf.net/jobs/p/globex-devops-cairo"
+    ],
+    "confidence": 0.81,
+    "needs_human_review": false,
+    "retrieval_stats": {
+      "pages_fetched": 4,
+      "sources": {
+        "official": 14,
+        "third_party": 3
+      },
+      "jobs_by_source": {
+        "glassdoor": 1,
+        "wuzzuf": 1,
+        "linkedin": 1,
+        "bayt": 1
+      },
+      "location": "egypt",
+      "official_domain": "globex-cloud.com",
+      "search_provider": "stub (canned)"
+    }
+  }
+}
