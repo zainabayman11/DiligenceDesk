@@ -1,0 +1,61 @@
+{
+  "_note": "Fixed scenarios for DETERMINISTIC, offline scoring. Each scenario names a built-in synthetic company (defined in stub_tools.py) and its expectations. The Acme fixture deliberately contains a THIRD-PARTY tech mention (WSJ: TensorFlow/Kubernetes) so the eval can lock in the domain-based evidence rule: a third-party signal must be 'inferred', never 'confirmed'. Fully offline and deterministic.",
+  "scenarios": [
+    {
+      "id": "acme-ai-health",
+      "company": "Acme AI Health",
+      "expected": {
+        "official_domain": "acme-ai-health.com",
+        "tech_signals": ["Python", "FastAPI", "PostgreSQL", "AWS"],
+        "ai_signals": ["RAG", "LLM"],
+        "hiring_tracks": ["AI Engineer", "Data Engineer"],
+        "products_expected": true,
+        "inferred_not_confirmed": "TensorFlow",
+        "uncertainty_contains": [],
+        "role_lens_track": "ai_engineer"
+      }
+    },
+    {
+      "id": "globex-cloud",
+      "company": "Globex Cloud Systems",
+      "expected": {
+        "official_domain": "globex-cloud.com",
+        "tech_signals": ["Java", "Kubernetes", "AWS", "Microservices"],
+        "ai_signals": [],
+        "hiring_tracks": ["Backend Engineer", "DevOps / Platform Engineer"],
+        "products_expected": true,
+        "inferred_not_confirmed": "Terraform",
+        "uncertainty_contains": ["No AI or data"],
+        "role_lens_track": null
+      }
+    },
+    {
+      "id": "initech-erp",
+      "company": "Initech ERP Services",
+      "expected": {
+        "official_domain": "initech-erp.com",
+        "tech_signals": ["Odoo", "Python", "SAP", "PostgreSQL"],
+        "ai_signals": [],
+        "hiring_tracks": ["Odoo / ERP Consultant", "ERP / SAP Consultant"],
+        "products_expected": true,
+        "inferred_not_confirmed": null,
+        "uncertainty_contains": ["No AI or data"],
+        "role_lens_track": null
+      }
+    },
+    {
+      "id": "nosignal-consulting",
+      "company": "NoSignal Consulting",
+      "expected": {
+        "official_domain": "nosignal-consulting.com",
+        "tech_signals": [],
+        "ai_signals": [],
+        "hiring_tracks": [],
+        "products_expected": false,
+        "inferred_not_confirmed": null,
+        "uncertainty_contains": ["No tech-stack signals", "No AI or data", "No public hiring-track"],
+        "role_lens_track": null
+      }
+    }
+  ]
+}
