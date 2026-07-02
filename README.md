@@ -62,8 +62,7 @@ V1 stays at **4 agents on purpose**. AI signals, hiring tracks, uncertainty, and
 the role lens are NOT separate agents — they live inside `technical_signals_agent`
 and `writer_agent`. The specialists never write the brief: they contribute typed,
 **source-cited** evidence (`Claim` / `TechnicalSignal` / `HiringTrackSignal`) and
-the writer assembles the brief from that evidence alone. (Full rationale in
-[ARCHITECTURE.md](ARCHITECTURE.md).)
+the writer assembles the brief from that evidence alone.
 
 ---
 
@@ -213,4 +212,4 @@ when coverage is thin.
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT.

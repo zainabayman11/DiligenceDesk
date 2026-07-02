@@ -27,5 +27,10 @@ Thumbs.db
 # Local Claude Code settings (machine-specific permission grants)
 .claude/settings.local.json
 
+# Personal — kept LOCAL, never published to the public repo
+ARCHITECTURE.md
+INTERVIEW.md
+LICENSE
+
 # Evaluation runs (keep folder + scenarios, ignore generated result JSON)
 eval/results/*.json
